@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: whatsapp-eclesia
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    disk:
+      name: auth-data
+      mountPath: /opt/render/project/src/auth_info_baileys
+      sizeGB: 1
+    envVars:
+      - key: API_SECRET
+        generateValue: true
+      - key: PORT
+        value: 3000
