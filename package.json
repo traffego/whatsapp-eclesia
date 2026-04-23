@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Servidor WhatsApp (Baileys) para envio de lembretes do EclesiaSaaS",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.7.9",
+    "@whiskeysockets/baileys": "^6.7.18",
     "express": "^4.18.2",
+    "node-cache": "^5.1.2",
     "pino": "^8.19.0",
     "qrcode": "^1.5.3"
   },
