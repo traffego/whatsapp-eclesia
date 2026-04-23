@@ -1,14 +1,16 @@
 // WhatsApp server (Baileys) — para deploy no Render
 // Retorna no /status: { connected, state, number, name }
 import express from "express";
-import {
-  default as makeWASocket,
+import baileys from "@whiskeysockets/baileys";
+
+const {
+  default: makeWASocket,
   useMultiFileAuthState,
   DisconnectReason,
   fetchLatestBaileysVersion,
   makeCacheableSignalKeyStore,
   proto,
-} from "@whiskeysockets/baileys";
+} = baileys;
 import qrcode from "qrcode";
 import NodeCache from "node-cache";
 import fs from "fs";
